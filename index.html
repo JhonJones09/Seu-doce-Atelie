@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Doce Ateliê | Confeitaria Artesanal de Luxo</title>
+    <meta name="description" content="Bem-vindo ao Seu Doce Ateliê. Oferecemos bolos artísticos, doces finos e sobremesas gourmet personalizadas para tornar seus momentos inesquecíveis ainda mais doces.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header id="main-header" class="header">
+        <div class="container">
+            <a href="#" class="logo" id="logo-link">
+                <span class="logo-text">Seu Doce <span class="accent">Ateliê</span></span>
+            </a>
+            
+            <nav class="nav" id="main-nav">
+                <ul>
+                    <li><a href="#inicio" class="nav-link active">Início</a></li>
+                    <li><a href="#produtos" class="nav-link">Menu & Doces</a></li>
+                    <li><a href="#sobre" class="nav-link">O Ateliê</a></li>
+                    <li><a href="#contato" class="nav-link btn-contact">Fazer Pedido</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-nav-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Confeitaria Fina & Artística</span>
+                <h1 class="hero-title">Onde cada detalhe é uma obra de <span class="gradient-text">arte doce</span></h1>
+                <p class="hero-description">Transformamos os melhores ingredientes em experiências memoráveis. Bolos personalizados, doces finos e lembranças requintadas feitas à mão com amor e sofisticação.</p>
+                <div class="hero-actions">
+                    <a href="#produtos" class="btn btn-primary" id="explore-menu-btn">Explorar Menu</a>
+                    <a href="#contato" class="btn btn-secondary" id="custom-order-btn">Encomenda Personalizada</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- A placeholder for 3D Render / Premium Image -->
+                <div class="3d-canvas-container" id="canvas-3d-wrapper">
+                    <div class="glass-card visual-card">
+                        <div class="visual-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Toque 3D Ativo</div>
+                        <div class="visual-interactive-area" id="webgl-canvas-placeholder">
+                            <!-- 3D canvas will mount here -->
+                            <div class="fallback-sweet-illustration">
+                                <div class="macaron-container">
+                                    <div class="macaron macaron-top"></div>
+                                    <div class="macaron-cream"></div>
+                                    <div class="macaron macaron-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products / Gallery Section -->
+    <section id="produtos" class="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Nossas Delícias</span>
+                <h2 class="section-title">Menu Assinado</h2>
+                <p class="section-description">Descubra nossa seleção exclusiva de criações premium, preparadas com técnicas refinadas e sabores harmônicos.</p>
+            </div>
+            
+            <!-- Category Filter -->
+            <div class="category-tabs" id="menu-tabs">
+                <button class="tab-btn active" data-category="todos" id="tab-all">Todos</button>
+                <button class="tab-btn" data-category="bolos" id="tab-cakes">Bolos Festivos</button>
+                <button class="tab-btn" data-category="doces" id="tab-sweets">Doces Finos</button>
+                <button class="tab-btn" data-category="macarons" id="tab-macarons">Macarons</button>
+            </div>
+
+            <!-- Products Grid (will be populated dynamically from data.json) -->
+            <div class="products-grid" id="products-grid">
+                <!-- Static Fallback / Skeleton Cards -->
+                <div class="product-card glass-card" data-category="bolos">
+                    <div class="product-img-wrapper">
+                        <div class="product-img-placeholder" style="background: linear-gradient(135deg, #ffd3e0, #ff8da1);"></div>
+                        <span class="product-badge">Destaque</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Bolo de Pistache & Frutas Vermelhas</h3>
+                        <p class="product-description">Massa chiffon amanteigada, recheio cremoso de pistache siciliano e geleia artesanal de frutas vermelhas.</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 180,00 <small>/kg</small></span>
+                            <button class="btn-order-item" aria-label="Encomendar"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card glass-card" data-category="macarons">
+                    <div class="product-img-wrapper">
+                        <div class="product-img-placeholder" style="background: linear-gradient(135deg, #e3c4ff, #b57eff);"></div>
+                        <span class="product-badge">Coleção Fina</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Caixa de Macarons Premium</h3>
+                        <p class="product-description">Seleção com 12 macarons franceses crocantes por fora e macios por dentro, em sabores clássicos e exóticos.</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 85,00</span>
+                            <button class="btn-order-item" aria-label="Encomendar"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card glass-card" data-category="doces">
+                    <div class="product-img-wrapper">
+                        <div class="product-img-placeholder" style="background: linear-gradient(135deg, #ffe5c4, #ffad4a);"></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Trufas de Caramelo Salgado</h3>
+                        <p class="product-description">Trufas de chocolate belga meio amargo recheadas com caramelo salgado artesanal e flor de sal.</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 6,50 <small>/un</small></span>
+                            <button class="btn-order-item" aria-label="Encomendar"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="about-bg-glow"></div>
+        <div class="container about-container">
+            <div class="about-visual">
+                <div class="about-image-collage">
+                    <div class="collage-main glass-card">
+                        <div class="collage-placeholder" style="background: linear-gradient(135deg, #ffdbe2, #ffa4b6);">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                    </div>
+                    <div class="collage-sub glass-card">
+                        <div class="collage-placeholder-small" style="background: linear-gradient(135deg, #dff0ff, #8ab5ff);">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <span class="section-subtitle">Nossa História</span>
+                <h2 class="section-title">O Segredo por trás de cada Doce</h2>
+                <p>O <strong>Seu Doce Ateliê</strong> nasceu da paixão pela alta confeitaria e do desejo de transformar momentos simples em comemorações extraordinárias. Fundado em técnicas tradicionais francesas combinadas com o calor e a doçura dos ingredientes brasileiros, nós criamos verdadeiras joias comestíveis.</p>
+                <p>Nossa filosofia baseia-se em três pilares fundamentais: frescor absoluto, estética impecável e sabor inesquecível. Cada criação é única, personalizada para refletir a personalidade e o sonho de nossos clientes.</p>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+                        <div>
+                            <h4>Ingredientes Premium</h4>
+                            <p>Chocolate Belga, fava de baunilha de Madagascar e frutas selecionadas.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-seedling"></i></div>
+                        <div>
+                            <h4>Artesanal de Verdade</h4>
+                            <p>Tudo feito à mão do zero, sem conservantes ou misturas industriais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Order Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="contact-card glass-card">
+                <div class="contact-grid">
+                    <div class="contact-info-panel">
+                        <span class="panel-subtitle">Vamos conversar?</span>
+                        <h2 class="panel-title">Encomende sua Felicidade</h2>
+                        <p class="panel-description">Tem uma ideia especial para um evento, casamento ou aniversário? Entre em contato e vamos desenhar o doce perfeito juntos.</p>
+                        
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <h5>Telefone / WhatsApp</h5>
+                                    <p>(11) 99999-8888</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <h5>E-mail</h5>
+                                    <p>contato@seudoceatelie.com.br</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <h5>Endereço</h5>
+                                    <p>Av. Paulista, 1000 - Jardins, São Paulo - SP</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-panel">
+                        <form id="order-form" class="form">
+                            <div class="form-group">
+                                <label for="form-name">Seu Nome</label>
+                                <input type="text" id="form-name" placeholder="Como podemos te chamar?" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-email">E-mail</label>
+                                    <input type="email" id="form-email" placeholder="exemplo@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-phone">WhatsApp</label>
+                                    <input type="tel" id="form-phone" placeholder="(11) 99999-9999" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-type">Tipo de Pedido</label>
+                                <select id="form-type">
+                                    <option value="bolo">Bolo Personalizado</option>
+                                    <option value="doces">Doces para Festa</option>
+                                    <option value="corporativo">Corporativo / Brindes</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Conte-nos sua ideia</label>
+                                <textarea id="form-message" rows="4" placeholder="Descreva o bolo dos seus sonhos, quantidade de convidados ou data do evento..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-form">
+                                <span>Enviar Mensagem</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Seu Doce Ateliê. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/animations.js" defer></script>
+    <script src="assets/js/3d-render.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

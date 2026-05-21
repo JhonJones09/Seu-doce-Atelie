@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": "bolo-pistache",
+      "name": "Bolo de Pistache & Frutas Vermelhas",
+      "category": "bolos",
+      "price": 180.00,
+      "priceUnit": "kg",
+      "description": "Massa chiffon amanteigada, recheio cremoso de pistache siciliano e geleia artesanal de frutas vermelhas.",
+      "featured": true,
+      "gradient": "linear-gradient(135deg, #ffd3e0, #ff8da1)"
+    },
+    {
+      "id": "macarons-caixa",
+      "name": "Caixa de Macarons Premium",
+      "category": "macarons",
+      "price": 85.00,
+      "priceUnit": "unidade",
+      "description": "Seleção com 12 macarons franceses crocantes por fora e macios por dentro, em sabores clássicos e exóticos.",
+      "featured": true,
+      "gradient": "linear-gradient(135deg, #e3c4ff, #b57eff)"
+    },
+    {
+      "id": "trufas-caramelo",
+      "name": "Trufas de Caramelo Salgado",
+      "category": "doces",
+      "price": 6.50,
+      "priceUnit": "un",
+      "description": "Trufas de chocolate belga meio amargo recheadas com caramelo salgado artesanal e flor de sal.",
+      "featured": true,
+      "gradient": "linear-gradient(135deg, #ffe5c4, #ffad4a)"
+    },
+    {
+      "id": "bolo-red-velvet",
+      "name": "Naked Red Velvet Supreme",
+      "category": "bolos",
+      "price": 160.00,
+      "priceUnit": "kg",
+      "description": "Massa aveludada vermelha, recheio generoso de cream cheese frosting com baunilha bourbon e decoração de morangos frescos.",
+      "featured": false,
+      "gradient": "linear-gradient(135deg, #ffb3c1, #e63946)"
+    },
+    {
+      "id": "doce-camafeu",
+      "name": "Camafeu de Nozes Nobre",
+      "category": "doces",
+      "price": 7.00,
+      "priceUnit": "un",
+      "description": "Doce fino de nozes com cobertura brilhante de fondant e decorado com noz inteira dourada.",
+      "featured": false,
+      "gradient": "linear-gradient(135deg, #f0ebd8, #c4a482)"
+    },
+    {
+      "id": "macarons-pistache",
+      "name": "Macaron de Pistache Individual",
+      "category": "macarons",
+      "price": 7.50,
+      "priceUnit": "un",
+      "description": "Macaron clássico francês recheado com ganache cremosa de pistache e pedaços tostados.",
+      "featured": false,
+      "gradient": "linear-gradient(135deg, #d8f3dc, #74c69d)"
+    }
+  ]
+}
